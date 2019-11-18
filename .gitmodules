@@ -1,0 +1,4 @@
+[submodule "state_estimation"]
+	path = state_estimation
+	url = https://github.com/stevendaniluk/state_estimation
+	branch = master

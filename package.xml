@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <name>state_estimation_ros</name>
+  <version>0.0.0</version>
+  <description>TODO</description>
+
+  <maintainer email="stevendaniluk8@gmail.com">Steven Daniluk</maintainer>
+  <author email="stevendaniluk8@gmail.com">Steven Daniluk</author>
+  <license>BSD</license>
+
+  <!-- Build Tool Dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Build Dependencies -->
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <!-- Run Time Dependencies -->
+  <!-- <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend> -->
+
+</package>
