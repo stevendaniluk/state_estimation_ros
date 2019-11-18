@@ -46,6 +46,17 @@ target_link_libraries(state_estimation_ros
   ${catkin_LIBRARIES}
 )
 
+# Install the library and header files
+install(TARGETS state_estimation_ros
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+)
+
 #############
 ## Testing ##
 #############
