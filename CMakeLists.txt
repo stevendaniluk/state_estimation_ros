@@ -1,13 +1,12 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(state_estimation_ros)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   nav_msgs
   sensor_msgs
+  state_estimation
   std_msgs
 )
 
@@ -18,7 +17,7 @@ find_package(Eigen3 REQUIRED)
 ###################################
 
 catkin_package(
-  INCLUDE_DIRS include state_estimation/include
+  INCLUDE_DIRS include
   LIBRARIES state_estimation state_estimation_ros
 )
 
@@ -27,22 +26,17 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
   include
-  state_estimation/include
 )
 
 ###########
 ## Build ##
 ###########
 
-# Add our core state estimation libraries
-add_subdirectory(state_estimation)
-
 # ROS wrappers library
 add_library(state_estimation_ros
   src/ros_conversions.cpp
 )
 target_link_libraries(state_estimation_ros
-  state_estimation
   ${catkin_LIBRARIES}
 )
 
