@@ -20,15 +20,13 @@ const std::array<int, 6> PLANER_2D_TWIST_MSG_MAP = {
     planer_2d::state::VX, planer_2d::state::VY, -1, -1, -1, planer_2d::state::VPSI};
 
 ////////////////////////////////////
-// NH Odometry measurement maps
+// Accel, Gyro, and IMU measurement maps
 
-const std::array<int, 3> NH_ODOM_MEAS_LINEAR_VEL_MSG_MAP = {meas::nh_odom::VX, -1, -1};
-const std::array<int, 3> NH_ODOM_MEAS_ANGULAR_VEL_MSG_MAP = {-1, -1, meas::nh_odom::VPSI};
-const std::array<int, 6> NH_ODOM_MEAS_TWIST_MSG_MAP = {meas::nh_odom::VX,  -1, -1, -1, -1,
-                                                       meas::nh_odom::VPSI};
+const std::array<int, 3> GYRO_MEAS_ANGULAR_VEL_MSG_MAP = {meas::gyro::VPHI, meas::gyro::VTHETA,
+                                                          meas::gyro::VPSI};
 
-////////////////////////////////////
-// IMU measurement maps
+const std::array<int, 3> ACCEL_MEAS_LINEAR_ACCEL_MSG_MAP = {meas::accel::AX, meas::accel::AY,
+                                                            meas::accel::AZ};
 
 const std::array<int, 3> IMU_MEAS_ANGULAR_VEL_MSG_MAP = {meas::imu::VPHI, meas::imu::VTHETA,
                                                          meas::imu::VPSI};
